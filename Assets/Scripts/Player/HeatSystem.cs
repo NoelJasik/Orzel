@@ -70,7 +70,7 @@ public class HeatSystem : MonoBehaviour
         }
         if (!isNearCooler)
         {
-            heatTimer -= Time.deltaTime * (isHotter ? 4 : 1);
+            heatTimer -= Time.deltaTime * (isHotter ? 8 : 1);
         }
         else
         {
