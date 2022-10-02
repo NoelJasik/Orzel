@@ -22,6 +22,7 @@ public class WinOnTouch : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+               other.GetComponent<PlayerMovement>().rb.velocity = new Vector2(0,0);
             other.GetComponent<PlayerMovement>().enabled = false;
             other.GetComponent<HeatSystem>().enabled = false;
             winScreen.SetActive(true);
