@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2566008405611845097}
   - component: {fileID: -5310728698017016928}
   m_Layer: 0
-  m_Name: WingPick
+  m_Name: FireBallHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,19 +226,19 @@ ParticleSystem:
       maxColor: {r: 0.16862746, g: 0.15294118, b: 0.30588236, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9333334, g: 0.19607845, b: 0, a: 1}
-        key1: {r: 0.9058824, g: 0.27450982, b: 0.2901961, a: 1}
-        key2: {r: 1, g: 0.8431373, b: 0, a: 0}
-        key3: {r: 1, g: 0.8431373, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 1, g: 0.4490608, b: 0, a: 1}
+        key1: {r: 1, g: 0.74442893, b: 0.16509432, a: 1}
+        key2: {r: 1, g: 0.9532509, b: 0, a: 0}
+        key3: {r: 1, g: 0.9532509, b: 0, a: 0}
+        key4: {r: 1, g: 0.9532509, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 14456
+        ctime0: 25250
         ctime1: 46838
         ctime2: 55127
         ctime3: 55127
-        ctime4: 0
+        ctime4: 55127
         ctime5: 0
         ctime6: 0
         ctime7: 0

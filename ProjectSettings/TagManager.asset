@@ -9,6 +9,7 @@ TagManager:
   - Platform
   - Cooler
   - HotBoy
+  - Attack
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Enemy
   - Player
   - Platform
-  - 
+  - Background
   - 
   - 
   - 
