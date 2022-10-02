@@ -29,6 +29,9 @@ public class HeatSystem : MonoBehaviour
     GameObject deathParticle;
     [SerializeField]
     GameObject[] heatStates;
+    [SerializeField]
+    GameObject hitEffect;
+    static float hitTimer;
 
     [SerializeField]
     Transform pickupHolder;
@@ -51,6 +54,14 @@ public class HeatSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         if(hitTimer >= 0.05)
+        {
+             hitEffect.SetActive(true);
+        } else
+        {
+                   hitEffect.SetActive(false);
+        }
+        hitTimer -= Time.deltaTime;
         heatDisplay.value = heatTimer;
         if (heatTimer > 1)
         {
@@ -69,6 +80,7 @@ public class HeatSystem : MonoBehaviour
         if (heatTimer == 0 && !isRespawning)
         {
             Instantiate(deathParticle, transform.position, transform.rotation);
+            pm.rb.velocity = new Vector2(0,0);
             PlayerMovement.hasWings = false;
             DeathScreen.SetActive(true);
             playerSprite.SetActive(false);
@@ -154,10 +166,20 @@ public class HeatSystem : MonoBehaviour
 
     public static void AddTime(float _timeToAdd)
     {
-        heatTimer += _timeToAdd;
+
+            heatTimer += _timeToAdd;
+
+        
     }
     public static void RemoveTime(float _timeToRemove)
     {
-        heatTimer -= _timeToRemove;
+         if(hitTimer <= 0)
+        {
+            heatTimer -= _timeToRemove;
+            hitTimer = 0.25f;
+        } else if(_timeToRemove > 10)
+        {
+            heatTimer -= _timeToRemove;
+        }
     }
 }

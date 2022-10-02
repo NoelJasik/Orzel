@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     float jumpForce;
     [SerializeField]
     float jumpStopForce;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     bool isJumping;
     bool isButtonUp;
     bool canJump;
